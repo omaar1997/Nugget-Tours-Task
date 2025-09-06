@@ -1,0 +1,98 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+.header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #2d3748;
+  color: white;
+}
+
+.sidebar {
+  background: #edf2f7;
+  padding: 1rem;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #2d3748;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 1rem;
+  background: #f7fafc;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+th button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background: #f0f4f8;
+}
+
+#pagination button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #2b6cb0;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background: #2c5282;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    grid-row: 2;
+  }
+}
